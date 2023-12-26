@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".fragment.FeedbackFragment">
+
+    <include layout="@layout/app_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:src="@drawable/feedback" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/warmly_welcome_to_your_suggestions_device_nerrors_and_feedbacks"
+                style="@style/DescriptionTextSmall"
+                android:layout_marginBottom="25dp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_user"
+                style="@style/EditTextAppearance"
+                android:inputType="textPersonName"
+                android:hint="@string/name" />
+
+            <EditText
+                android:id="@+id/edit_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditTextAppearance"
+                android:inputType="textEmailAddress"
+                android:drawableStart="@drawable/ic_mail2"
+                android:hint="@string/email" />
+
+            <EditText
+                android:id="@+id/edit_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditTextAppearance"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:maxLines="5"
+                android:gravity="bottom"
+                android:drawableStart="@drawable/ic_note"
+                android:hint="@string/feedback" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_send_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                style="@style/LongButton"
+                android:text="@string/send_feedback" />
+
+            <include layout="@layout/copyright" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

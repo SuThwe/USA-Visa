@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white2"
+    android:orientation="vertical"
+    tools:context=".fragment.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_usa"
+                style="@style/HomeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/usa_visa_preparation"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_mail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_usa" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_appointment_bg"
+                android:layout_width="@dimen/appointment_circular_image_size"
+                android:layout_height="@dimen/appointment_circular_image_size"
+                android:layout_marginTop="26dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_usa"
+                app:shapeAppearance="@style/ShapeAppearance.App.CircleImageView"
+                app:srcCompat="@drawable/appointment_bg" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_no_appointment"
+                style="@style/NormalTextAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_appointment_yet"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/img_appointment_bg"
+                app:layout_constraintEnd_toEndOf="@id/img_appointment_bg"
+                app:layout_constraintStart_toStartOf="@id/img_appointment_bg"
+                app:layout_constraintTop_toTopOf="@id/img_appointment_bg" />
+
+            <LinearLayout
+                android:id="@+id/layout_appointment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/img_appointment_bg"
+                app:layout_constraintEnd_toEndOf="@id/img_appointment_bg"
+                app:layout_constraintStart_toStartOf="@id/img_appointment_bg"
+                app:layout_constraintTop_toTopOf="@id/img_appointment_bg">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_time"
+                    style="@style/AppointmentText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/pt_serif_caption"
+                    tools:text="11:00 AM" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_date"
+                    style="@style/AppointmentDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="sans-serif-black"
+                    tools:text="19 Nov 2022" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_location"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/pt_serif_caption"
+                    tools:text="Yangon" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_appointment"
+                style="@style/AppointmentCompactButton"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/appointment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_appointment_bg" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_things_to_know"
+                style="@style/CardViewTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_appointment">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_things_to_know" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/HomeMenuTextAppearance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/things_to_know" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_q_and_a"
+                style="@style/CardViewTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                app:layout_constraintEnd_toEndOf="@id/cardview_things_to_know"
+                app:layout_constraintStart_toStartOf="@id/cardview_things_to_know"
+                app:layout_constraintTop_toBottomOf="@id/cardview_things_to_know">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_chat" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/HomeMenuTextAppearance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/popular_q_and_a" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_practice"
+                style="@style/CardViewTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                app:layout_constraintEnd_toEndOf="@id/cardview_q_and_a"
+                app:layout_constraintStart_toStartOf="@id/cardview_q_and_a"
+                app:layout_constraintTop_toBottomOf="@id/cardview_q_and_a">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_document" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/HomeMenuTextAppearance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/practice" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:text="&#169; PurpleSoftwareHouse"
+                android:textColor="@color/black3"
+                android:textSize="10sp"
+                app:layout_constraintTop_toBottomOf="@id/cardview_practice"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

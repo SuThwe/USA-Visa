@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="splash_image_size">300dp</dimen>
+    <dimen name="appointment_circular_image_size">250dp</dimen>
+    <dimen name="drawable_with_text_padding">10dp</dimen>
+    <dimen name="explanation_margin">15dp</dimen>
+    <dimen name="listitem_layout_padding">12dp</dimen>
+</resources>

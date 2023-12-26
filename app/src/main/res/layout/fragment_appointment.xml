@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".fragment.AppointmentFragment">
+
+    <include layout="@layout/app_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/appointment" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/the_day_you_decide_to_do_it_is_your_lucky_day"
+                style="@style/DescriptionTextSmall"
+                android:layout_marginBottom="25dp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_calendar"
+                style="@style/EditTextAppearance"
+                android:inputType="textPersonName"
+                android:hint="Date" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_clock"
+                style="@style/EditTextAppearance"
+                android:inputType="textPersonName"
+                android:hint="Time" />
+
+            <EditText
+                android:id="@+id/edit_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditTextAppearance"
+                android:inputType="textEmailAddress"
+                android:drawableStart="@drawable/ic_home"
+                android:hint="City" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                style="@style/LongButton"
+                android:text="@string/save" />
+
+            <include layout="@layout/copyright" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

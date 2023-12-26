@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">USA Visa Preparation</string>
+    <string name="usa_visa_preparation">USA\nVisa Preparation</string>
+    <string name="splash_desc">Q&amp;A, Things to know, and Practice with\nyour personal answers</string>
+    <string name="lets_go">Let\'s Go</string>
+    <string name="usa">USA</string>
+    <string name="visa_preparation">Visa Preparation</string>
+    <string name="no_appointment_yet">No appointment yet</string>
+    <string name="appointment">Appointment</string>
+    <string name="things_to_know">Things to know</string>
+    <string name="popular_q_and_a">Popular Q &amp; A</string>
+    <string name="practice">Practice</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="send_feedback">Send Feedback</string>
+    <string name="feedback">Feedback</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="_169_purplesoftwarehouse">© PurpleSoftwareHouse</string>
+    <string name="save">Save</string>
+    <string name="warmly_welcome_to_your_suggestions_device_nerrors_and_feedbacks">Warmly welcome to your suggestions, device\nerrors and feedbacks :)</string>
+    <string name="the_day_you_decide_to_do_it_is_your_lucky_day">The day you decide to do it is your lucky day.</string>
+    <string name="your_answer">Your answer</string>
+    <string name="sample_answer">Sample answer :</string>
+    <string name="let_s_practice_for_your_visa_interview">Let\'s practice for your visa interview!</string>
+    <string name="start">Start</string>
+    <string name="hiding_text_blah">blah blah blah blah blah blah blah blah </string>
+    <string name="touch_to_see_your_answer">Touch below to see your answer</string>
+    <string name="touch_to_hide_your_answer">Touch again to hide your answer</string>
+    <string name="next">Next</string>
+    <string name="done">Done</string>
+    <string name="you_havent_answered_for_this_question">You haven\'t answered for this question.</string>
+    <string name="something_went_wrong_message">Something went wrong, please try again later.</string>
+</resources>

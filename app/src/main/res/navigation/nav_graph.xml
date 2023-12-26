@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.su.purple.usvisapreparation.fragment.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.su.purple.usvisapreparation.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_feedbackFragment"
+            app:destination="@id/feedbackFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_appointmentFragment"
+            app:destination="@id/appointmentFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_thingsToKnowFragment"
+            app:destination="@id/thingsToKnowFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_popularQuestionsFragment"
+            app:destination="@id/popularQuestionsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_practiceFragment"
+            app:destination="@id/practiceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.su.purple.usvisapreparation.fragment.FeedbackFragment"
+        android:label="fragment_feedback"
+        tools:layout="@layout/fragment_feedback" />
+    <fragment
+        android:id="@+id/appointmentFragment"
+        android:name="com.su.purple.usvisapreparation.fragment.AppointmentFragment"
+        android:label="fragment_appointment"
+        tools:layout="@layout/fragment_appointment" />
+    <fragment
+        android:id="@+id/thingsToKnowFragment"
+        android:name="com.su.purple.usvisapreparation.fragment.thingstoknow.ThingsToKnowFragment"
+        android:label="fragment_things_to_know"
+        tools:layout="@layout/fragment_things_to_know" >
+        <action
+            android:id="@+id/action_thingsToKnowFragment_to_explanationThingsToKnowFragment"
+            app:destination="@id/explanationThingsToKnowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/explanationThingsToKnowFragment"
+        android:name="com.su.purple.usvisapreparation.fragment.thingstoknow.ExplanationThingsToKnowFragment"
+        android:label="fragment_explanation_things_to_know"
+        tools:layout="@layout/fragment_explanation_things_to_know" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="explanation"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/popularQuestionsFragment"
+        android:name="com.su.purple.usvisapreparation.fragment.popularquestions.PopularQuestionsFragment"
+        android:label="fragment_popular_questions"
+        tools:layout="@layout/fragment_popular_questions" >
+        <action
+            android:id="@+id/action_popularQuestionsFragment_to_explanationPopularQuestionsFragment"
+            app:destination="@id/explanationPopularQuestionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/explanationPopularQuestionsFragment"
+        android:name="com.su.purple.usvisapreparation.fragment.popularquestions.explanation.ExplanationPopularQuestionsFragment"
+        android:label="fragment_explanation_popular_questions"
+        tools:layout="@layout/fragment_explanation_popular_questions" >
+        <argument
+            android:name="popular_question"
+            app:argType="com.su.purple.usvisapreparation.model.PopularQuestion" />
+    </fragment>
+    <fragment
+        android:id="@+id/practiceFragment"
+        android:name="com.su.purple.usvisapreparation.fragment.practice.PracticeFragment"
+        android:label="fragment_practice"
+        tools:layout="@layout/fragment_practice" >
+        <action
+            android:id="@+id/action_practiceFragment_to_practiceQuestionFragment"
+            app:destination="@id/practiceQuestionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/practiceQuestionFragment"
+        android:name="com.su.purple.usvisapreparation.fragment.practice.PracticeQuestionFragment"
+        android:label="fragment_practice_question"
+        tools:layout="@layout/fragment_practice_question" >
+        <action
+            android:id="@+id/action_practiceQuestionFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "175982514038",
+    "project_id": "usa-visa-app-debug",
+    "storage_bucket": "usa-visa-app-debug.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175982514038:android:0b2e695ff6942d4c42f457",
+        "android_client_info": {
+          "package_name": "com.su.purple.usvisapreparation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175982514038-f2m2d5d8f82q8i4a6a134nsg91am4udc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0b9o9cw6Zmt6c5qo18wBe_j9SEtFxIq8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175982514038-f2m2d5d8f82q8i4a6a134nsg91am4udc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
