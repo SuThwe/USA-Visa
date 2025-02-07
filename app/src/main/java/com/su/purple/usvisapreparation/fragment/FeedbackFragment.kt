@@ -20,7 +20,7 @@ class FeedbackFragment : Fragment(R.layout.fragment_feedback) {
         setUpToolbar()
 
         btn_send_feedback.setOnClickListener {
-            (activity as MainActivity)?.emailIntent(
+            (activity as MainActivity).sendEmail(
                 edit_name.text.toString(),
                 edit_feedback.text.toString()
             )

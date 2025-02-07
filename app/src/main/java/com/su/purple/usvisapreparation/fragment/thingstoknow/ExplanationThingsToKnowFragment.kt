@@ -2,6 +2,7 @@ package com.su.purple.usvisapreparation.fragment.thingstoknow
 
 import android.os.Bundle
 import android.text.Html
+import android.text.method.LinkMovementMethod
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.core.text.HtmlCompat
@@ -23,6 +24,7 @@ class ExplanationThingsToKnowFragment : Fragment(R.layout.fragment_explanation_t
         setUpToolbar()
         tv_title.text = title
         tv_explanation.text = HtmlCompat.fromHtml(explanation, 0)
+        tv_explanation.movementMethod = LinkMovementMethod.getInstance()
     }
 
     private fun setUpToolbar() {

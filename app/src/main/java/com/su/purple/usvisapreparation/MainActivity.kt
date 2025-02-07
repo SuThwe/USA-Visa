@@ -1,15 +1,10 @@
 package com.su.purple.usvisapreparation
 
+import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.net.Uri
 import android.os.Bundle
-import androidx.core.os.bundleOf
-import androidx.fragment.app.add
-import androidx.fragment.app.commit
-import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI
-import com.su.purple.usvisapreparation.fragment.SplashFragment
+import androidx.appcompat.app.AppCompatActivity
 import com.su.purple.usvisapreparation.helper.AppConfig
 import com.su.purple.usvisapreparation.util.Constants
 
@@ -27,20 +22,19 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         AppConfig.setPreferences(this)
     }
 
-    fun emailIntent(name: String, feedback: String) {
+    @SuppressLint("IntentReset")
+    fun sendEmail(name: String, feedback: String) {
         val sendTo = Constants.FEEDBACK_EMAIL
         val subject = Constants.FEEDBACK_EMAIL_SUBJECT
         val body = "$feedback\n\nBest regards,\n$name"
 
-        val intent = Intent(Intent.ACTION_SENDTO)
-        intent.putExtra(Intent.EXTRA_EMAIL, arrayOf(sendTo));
-        intent.putExtra(Intent.EXTRA_SUBJECT, subject)
-        intent.putExtra(Intent.EXTRA_TEXT, body)
+        val emailIntent = Intent(Intent.ACTION_SEND)
+        emailIntent.setData(Uri.parse("mailto:"))
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(sendTo));
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject)
+        emailIntent.putExtra(Intent.EXTRA_TEXT, body)
+        emailIntent.setType("text/plain")
 
-        // set type of intent
-        intent.type = "message/rfc822"
-
-        // startActivity with intent with chooser as Email client using createChooser function
-        startActivity(Intent.createChooser(intent, "Choose an Email client :"))
+        startActivity(emailIntent)
     }
 }
